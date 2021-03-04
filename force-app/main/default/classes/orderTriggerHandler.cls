@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 02-27-2021
+ * @last modified on  : 03-02-2021
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  * Modifications Log 
  * Ver   Date         Author                               Modification
@@ -40,7 +40,7 @@ public with sharing class orderTriggerHandler {
 
         for (Account a : accountsWithOrders){
             if (!accountswithOrdersRemaining.contains(a.Id)){
-            account.Active__c = false;
+            a.Active__c = false;
             accountstoDeactivate.add(a);
             }
         }

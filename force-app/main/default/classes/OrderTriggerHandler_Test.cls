@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 03-01-2021
+ * @last modified on  : 03-02-2021
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  * Modifications Log 
  * Ver   Date         Author                               Modification
@@ -21,12 +21,12 @@ public with sharing class OrderTriggerHandler_Test {
 
         // create contracts for the accounts
         Contract contr1 = new Contract ( AccountId = accOneOrder.Id,
-                                         ContractTer= 4, 
+                                         ContractTerm= 4, 
                                          StartDate = date.today(), 
                                          Status = 'Draft');
 
         Contract contr2 = new Contract ( AccountId = accMoreOrders.Id,
-                                         ContractTer= 6, 
+                                         ContractTerm= 6, 
                                          StartDate = date.today(), 
                                          Status = 'Draft');
 
@@ -39,9 +39,9 @@ public with sharing class OrderTriggerHandler_Test {
     update contr2;
 
 // insert orders
-    Order orderWithone = new Order( AccountId = accOneOrder.Id, Status = 'Draft', EffectiveDate = data.today());
-    Order orderWithmore1 = new Order( AccountId = accMoreOrders.Id, Status = 'Draft', EffectiveDate = data.today());
-    Order orderWithmore2 = new Order( AccountId = accMoreOrders.Id, Status = 'Draft', EffectiveDate = data.today());
+    Order orderWithone = new Order( AccountId = accOneOrder.Id, Status = 'Draft', EffectiveDate = date.today());
+    Order orderWithmore1 = new Order( AccountId = accMoreOrders.Id, Status = 'Draft', EffectiveDate = date.today());
+    Order orderWithmore2 = new Order( AccountId = accMoreOrders.Id, Status = 'Draft', EffectiveDate = date.today());
 
     insert new Order[]{orderWithone, orderWithmore1, orderWithmore2};
 
